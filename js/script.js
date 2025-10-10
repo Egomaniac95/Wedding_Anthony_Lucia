@@ -171,12 +171,12 @@ play_music.addEventListener('click',function(){
 // Set the date of the wedding
 //It's gmt-5 so we need to add 5 hours to the time
 //------------Here we set the time of the wedding----------------//
-//const weddingDate = new Date("2023-04-30T21:00:00Z").getTime();
+const weddingDate = new Date("2025-11-22T21:00:00Z").getTime();
 
 //------------Here we set the time of the wedding for educational purposes----------------//
-const currentDate = new Date();  // Obtiene la fecha actual
-currentDate.setHours(24, 0, 0, 0);  // Establece la hora deseada (21:00:00)
-const weddingDate = currentDate.getTime(); 
+//const currentDate = new Date();  // Obtiene la fecha actual
+//currentDate.setHours(24, 0, 0, 0);  // Establece la hora deseada (21:00:00)
+//const weddingDate = currentDate.getTime(); 
 // Update the countdown every second
 setInterval(() => {
   // Get the current date
@@ -184,6 +184,17 @@ setInterval(() => {
 
   // Calculate the time remaining until the wedding date
   const timeRemaining = weddingDate - now;
+
+  if (timeRemaining <= 0) {
+    clearInterval(timer);
+    document.getElementById("days").innerHTML = 0;
+    document.getElementById("hours").innerHTML = 0;
+    document.getElementById("minutes").innerHTML = 0;
+    document.getElementById("seconds").innerHTML = 0;
+    document.getElementById("countdown").classList.add("countdown-finished");
+    document.getElementById("countdown").innerHTML = "¡ Que viva la familia Ramirez Aranda !";
+    return;
+  };
 
   // Calculate the days, hours, minutes, and seconds remaining
   const daysRemaining = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
