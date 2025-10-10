@@ -170,8 +170,8 @@ play_music.addEventListener('click',function(){
 //...................cOUNTDOWN TO WEDDING ...............//
 // Set the date of the wedding
 //It's gmt-5 so we need to add 5 hours to the time
-//------------Here we set the time of the wedding----------------//
-const weddingDate = new Date("2025-11-22T21:00:00Z").getTime();
+// 22 Nov 2025 - 3:00 PM (UTC-5, Barranca)
+const weddingDate = new Date("2025-11-22T15:00:00-05:00").getTime();
 
 //------------Here we set the time of the wedding for educational purposes----------------//
 //const currentDate = new Date();  // Obtiene la fecha actual
@@ -238,7 +238,13 @@ btnConsultar.addEventListener('click', (event) => {
   pruebaDiv.style.display = 'none';
   ShowInvitation.style.display = 'none';
    // Evita que el formulario se envíe y la página se recargue
-  const apiURL = 'https://mibodaangelywendy.uc.r.appspot.com/api/' + input.value;
+
+  // Pega aquí la URL que copiaste en el Paso 3
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwkPClemBvdCC7AtqNt0RQrESejzE6v4EX0ssskTgF2ELDt5PmflwSR9syT7Vz6NT1E/exec'; 
+
+  // Construimos la URL final con el parámetro 'id' que espera el script
+  const apiURL = `${SCRIPT_URL}?id=${input.value}`;
+
 
   //Función para mostrar invitación a personas que ven la wen ajenas al evento
   if (input.value === "GIFT") {
