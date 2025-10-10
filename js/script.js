@@ -297,8 +297,22 @@ btnConsultar.addEventListener('click', (event) => {
       });
       data.CONFIRMADO=`${textoOracion} </br> ` ;
     };
+    
     encabezado = encabezado.join(" ");
-    let entradas = (data.NUMBER_GUEST === "1") ? 'Nos encantaría contar con tu presencia en nuestra boda, por lo cual hemos reservado un asiento especialmente para ti.' : `Nos encantaría contar con su presencia en nuestra boda, por lo cual hemos reservado <span>${data.NUMBER_GUEST}</span> asientos especialmente para ustedes.`;
+
+    // Forzamos la conversión a número para una comparación segura
+    const numInvitados = Number(data.NUMBER_GUEST);
+
+    let entradas; // Declaramos la variable
+
+    if (numInvitados === 1) {
+        // Mensaje en singular, usando backticks (`) para que ${data.MESA} funcione
+        entradas = `Nos encantaría contar con tu presencia en nuestra boda, por lo cual hemos reservado un asiento especialmente para ti en la mesa <span>${data.MESA}</span>.`;
+    } else {
+        // Mensaje en plural
+        entradas = `Nos encantaría contar con su presencia en nuestra boda, por lo cual hemos reservado <span>${data.NUMBER_GUEST}</span> asientos especialmente para ustedes en la mesa <span>${data.MESA}</span>.`;
+    }
+
     pruebaDiv.innerHTML = `
       <h1>¡ ${encabezado} !</h1>
       </br>
