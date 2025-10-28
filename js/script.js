@@ -171,7 +171,7 @@ play_music.addEventListener('click',function(){
 // Set the date of the wedding
 //It's gmt-5 so we need to add 5 hours to the time
 // 22 Nov 2025 - 3:00 PM (UTC-5, Barranca)
-const weddingDate = new Date("2025-11-22T15:00:00-05:00").getTime();
+const weddingDate = new Date("2025-11-22T14:00:00-05:00").getTime();
 
 //------------Here we set the time of the wedding for educational purposes----------------//
 //const currentDate = new Date();  // Obtiene la fecha actual
