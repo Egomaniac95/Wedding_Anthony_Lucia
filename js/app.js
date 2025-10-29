@@ -18,23 +18,22 @@ var particlesConfig =
 {
   "particles": {
     "number": {
-      "value": 280,
+      "value": 300,
       "density": {
-        "enable": true,
-        "value_area": 700
+        "enable": false
       }
     },
     "color": {
-      "value": ["#ff9000", "#ff0266", "#00ffff","#15ff00"]
+      "value": ["#e47a2e", "#f7d794", "#b76e79"]
     },
     "shape": {
       "type": "circle",
       "stroke": {
-        "width": 0.5,
-        "color": ["#ff9000", "#ff0266", "#00ffff"]
+        "width": 0,
+        "color": ["#000000"]
       },
       "polygon": {
-        "nb_sides": 3
+        "nb_sides": 5
       },
       "image": {
         "src": "img/github.svg",
@@ -43,17 +42,17 @@ var particlesConfig =
       }
     },
     "opacity": {
-      "value": 0.8,
-      "random": false,
+      "value": 0.7,
+      "random": true,
       "anim": {
-        "enable": true,
+        "enable": false,
         "speed": 1,
-        "opacity_min": 0.5,
+        "opacity_min": 0.3,
         "sync": false
       }
     },
     "size": {
-      "value": 5,
+      "value": 4,
       "random": true,
       "anim": {
         "enable": false,
@@ -63,16 +62,16 @@ var particlesConfig =
       }
     },
     "line_linked": {
-      "enable": true,
-      "distance": 140,
-      "color": "#e47a2e",
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
       "opacity": 0.4,
       "width": 1
     },
     "move": {
       "enable": true,
-      "speed": 6,
-      "direction": "none",
+      "speed": 1.5,
+      "direction": "top",
       "random": false,
       "straight": false,
       "out_mode": "out",
@@ -125,22 +124,44 @@ var particlesConfig =
   },
   "retina_detect": true
 };
+// --- NUEVO CÓDIGO PARA LEER VARIABLES CSS ---
 
+// 1. Espera a que el DOM esté listo
+document.addEventListener('DOMContentLoaded', (event) => {
+
+  // 2. Obtiene los estilos computados del :root (donde viven tus variables)
+  const rootStyles = window.getComputedStyle(document.documentElement);
+  
+  // 3. Lee el valor de cada variable de color
+  // .trim() es importante para quitar espacios en blanco
+  const colorOrange = rootStyles.getPropertyValue('--orange').trim();
+  const colorYellow = rootStyles.getPropertyValue('--red-violet').trim();
+  const colorRose = rootStyles.getPropertyValue('--dark').trim();
+
+  // 4. Inyecta los colores leídos en el objeto de configuración
+  // Solo si se leyeron correctamente
+  if (colorOrange && colorYellow && colorRose) {
+    particlesConfig.particles.color.value = [colorOrange, colorYellow, colorRose];
+  };
 // Obtener el ancho de la pantalla
 var screenWidth = window.innerWidth;
 
 // Ajustar el número de partículas en función del ancho de la pantalla
 if (screenWidth < 576) { // Pantallas más pequeñas que 576px
-  particlesConfig.particles.number.value = 50;
-  particlesConfig.particles.number.density.value_area=200;
+  particlesConfig.particles.number.value = 250;
+  particlesConfig.particles.size.value = 2.5;
+  particlesConfig.particles.number.density.enable = false;
 }else if (screenWidth < 768) { // Pantallas más pequeñas que 768px
-  particlesConfig.particles.number.value = 100;
-} else if (screenWidth < 992) { // Pantallas entre 768px y 991px
-  particlesConfig.particles.number.value = 200;
+  particlesConfig.particles.number.value = 250;
+  particlesConfig.particles.size.value = 2.5;
+  particlesConfig.particles.number.density.enable = false;
 } else { // Pantallas más grandes que 991px
-  particlesConfig.particles.number.value = 280;
+  particlesConfig.particles.number.value = 350;
+  particlesConfig.particles.size.value = 3;
+  particlesConfig.particles.number.density.enable = false;
 };
 
 particlesJS('particles-js',
  particlesConfig
 );
+});

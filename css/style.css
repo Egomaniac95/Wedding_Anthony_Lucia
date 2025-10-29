@@ -532,11 +532,11 @@ header .caption .player{
 
 #invitation_card_container .title-invitation h1{
   color: var(--orange);
-  font-family: var(--Montserrat);
-  font-size: 5rem;
+  font-family: var(--Great-Vibes);
+  font-size: 6rem;
   font-weight: 600;
   letter-spacing: 1px;
-  text-shadow: 0 0 10px var(--yellow), 0 0 20px var(--yellow), 0 0 30px var(--yellow), 0 0 40px var(--orange);
+  text-shadow: 1px 1px 1px rgba(18, 31, 56, 0.2);
 }
 
 #prueba {
@@ -2199,7 +2199,7 @@ justify-content: center;
 
   #invitation_card_container .title-invitation h1{
     text-align: center;
-    font-size: 3.6rem;
+    font-size: 4.5rem;
   }
 
   #consulta_invitado input{
