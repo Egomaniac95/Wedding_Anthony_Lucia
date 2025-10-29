@@ -1668,7 +1668,7 @@ header .caption .player{
   }
 }
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width:767.98px){
   html{ font-size: 9px; }
 
   .headings h1{ font-size: 60px; }
@@ -1690,7 +1690,7 @@ header .caption .player{
     font-size: 2rem; margin-left: auto; margin-top:3rem;
   }
 
-  /*--about section in 768px --*/
+  /*--about section in 767.98px --*/
   .about-section{ width: 100%; }
   .about-section .box{
     height: 70vw; padding: 0 4.2vw; margin: 0;
@@ -2197,5 +2197,30 @@ html :focus-visible{
     position: static;        /* saca el absolute */
     margin-top: 24px;        /* separa del subtítulo */
     z-index: 1;
+  }
+}
+/* =========================================================
+   AJUSTE DE ANCHO PARA DESKTOP (Problemas 2 y 3)
+   ========================================================= */
+
+/* * Limita el ancho máximo en pantallas grandes (laptops/desktops)
+ * a 990px para mejorar la legibilidad y evitar el recorte
+ * de la imagen de la sección "phrase".
+ */
+@media (min-width: 992px) {
+  
+  .container {
+    /* Usamos !important para sobreescribir el 'max-width' de Bootstrap */
+    max-width: 990px !important; 
+  }
+  
+  .inner {
+    /* Este es tu contenedor para el Menú de Navegación */
+    max-width: 990px; 
+  }
+
+  .regalos-container {
+    /* Este es el contenedor de la sección de Regalos */
+    max-width: 990px;
   }
 }
