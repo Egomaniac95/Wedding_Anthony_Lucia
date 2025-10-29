@@ -11,7 +11,10 @@ html{
   scroll-behavior: smooth;
   -webkit-user-drag: none;
 }
-
+body {
+  /* Esto previene cualquier barra de scroll horizontal en toda la web */
+  overflow-x: hidden;
+}
 .inner {
   max-width: 1200px;
   width: 100%;
@@ -589,7 +592,7 @@ header .caption .player{
   align-items: center;
   height: auto;
   height: 700px;
-  width: 98vw;
+  width: 100%;
   position: relative;
   text-align: center;
   margin: 0;
@@ -913,14 +916,16 @@ header .caption .player{
 .phrase-section .contenido p {
   color: var(--white);
   font-family: var(--Garamond);
-  font-size: 4vh;
+  /* Solución: clamp() limita el tamaño mínimo y máximo */
+  font-size: clamp(28px, 3.5vh, 48px);
   font-weight: bold;
   margin: 0;
   z-index: 3;
 }
 
 .phrase-section .contenido .quote i {
-  font-size: 6vh;
+  /* Solución: clamp() también para las comillas */
+  font-size: clamp(40px, 5vh, 60px);
   margin-right: 2vh;
   margin-left: 2vh;
 }
@@ -2211,12 +2216,12 @@ html :focus-visible{
   
   .container {
     /* Usamos !important para sobreescribir el 'max-width' de Bootstrap */
-    max-width: 990px !important; 
+    max-width: 1000px !important; 
   }
   
 
   .regalos-container {
     /* Este es el contenedor de la sección de Regalos */
-    max-width: 990px;
+    max-width: 1000px;
   }
 }
