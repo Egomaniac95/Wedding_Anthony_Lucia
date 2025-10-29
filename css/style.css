@@ -1913,3 +1913,236 @@ header .caption .player{
 }
 
 .music { display: none; }
+
+
+/* =========================================================
+   THEME ADAPTER — dorado_naranja_borgona
+   (usar al final del archivo para sobrescribir estilos)
+   ========================================================= */
+
+html{
+  /* Tintes de overlay con el borgoña de marca */
+  --brand-overlay-10: rgba(var(--dark-rgb), .10);
+  --brand-overlay-20: rgba(var(--dark-rgb), .20);
+  --brand-overlay-30: rgba(var(--dark-rgb), .30);
+  --brand-overlay-45: rgba(var(--dark-rgb), .45);
+  --brand-shadow: 0 10px 30px rgba(var(--dark-rgb), .15);
+}
+
+/* ---------- NAVBAR ---------- */
+html.navigation{
+  background-color: var(--dark);
+  box-shadow: 0 1px 0 rgba(var(--black-rgb), .2);
+  border-bottom: 2px solid var(--orange);
+}
+html .navigation .menu li a:hover,
+html .navigation .menu li .active{
+  color: var(--orange);
+}
+
+html header .caption h1{
+  text-shadow: 0 6px 20px rgba(var(--black-rgb), .35);
+}
+html header .caption h2{
+  border-color: var(--soft-contrast-yellow);
+}
+html header .owl-prev,
+html header .owl-next{
+  background-color: var(--orange) !important;
+}
+
+/* ---------- COUNTDOWN ---------- */
+html .countdown-item{
+  border-color: var(--soft-contrast-yellow);
+  background-color: var(--brand-overlay-20);
+  backdrop-filter: blur(2px);
+}
+html .countdown-number{
+  color: var(--white);
+}
+html .countdown-label{
+  color: var(--yellow);
+  letter-spacing: .5px;
+}
+html .countdown-date-line{
+  background-color: var(--soft-contrast-yellow);
+  border-left-color: var(--soft-contrast-yellow);
+}
+
+/* ---------- INVITATION / ACCESO INVITADOS ---------- */
+html #invitation_card_container{
+  background: linear-gradient(180deg, var(--soft-yellow) 0%, var(--white) 100%);
+  border-top: 5px solid var(--orange);
+  border-bottom: 5px solid var(--orange);
+}
+html #consulta_invitado input{
+  box-shadow: 0 0 0 3px rgba(var(--orange-rgb), .10), 0 8px 24px rgba(var(--black-rgb), .10);
+}
+html #consulta_invitado .btn{
+  background: linear-gradient(180deg, var(--orange), color-mix(in srgb, var(--orange) 75%, var(--dark) 25%));
+  box-shadow: 0 6px 20px rgba(var(--dark-rgb), .25);
+}
+html #consulta_invitado .btn:hover{
+  background: var(--blue-gray);
+}
+
+/* ---------- HEADINGS GENERALES ---------- */
+html .headings h1{
+  color: var(--orange);
+  text-shadow: 0 2px 0 rgba(var(--black-rgb), .06);
+}
+html .headings h2{
+  color: var(--dark);
+}
+
+/* ---------- ABOUT (Los Novios) ---------- */
+html .about-section .box{
+  background: var(--color-surface);
+  border: 1px solid color-mix(in srgb, var(--soft-contrast-yellow) 70%, var(--white) 30%);
+  box-shadow: var(--brand-shadow);
+}
+html .about-section .box .gender h1{
+  color: var(--dark);
+}
+html .about-section .box .gender p{
+  color: var(--cream-grey);
+}
+html .about-section .box .male{
+  color: var(--blue-gray);
+}
+html .about-section .box .social-icon .s-icon{
+  border-color: var(--orange);
+  color: var(--orange);
+}
+html .about-section .box .social-icon .s-icon:hover{
+  background: var(--orange);
+  color: var(--white);
+}
+
+/* ---------- FRASE/BANNER ---------- */
+html .phrase-section .background-overlay{
+  background-color: var(--brand-overlay-10);
+  opacity: 1;
+}
+html .phrase-section .contenido{
+  background-color: var(--brand-overlay-20);
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(var(--soft-contrast-yellow), .5); /* no-op si tu navegador no soporta */
+}
+html .phrase-section .contenido .quote i{
+  color: var(--yellow);
+}
+
+/* ---------- EVENTOS / LA BODA ---------- */
+html .Event-section .para-section p{
+  color: var(--color-text-muted);
+}
+html .Event-section .mein-event .event-left{
+  border-right-color: var(--orange);
+}
+html .Event-section .mein-event .events h1{
+  color: var(--dark);
+}
+html .Event-section .mein-event .events h3{
+  color: var(--cream-grey);
+}
+html .Event-section .mein-event .events img,
+html .Event-section .mein-event .events iframe{
+  box-shadow: 0 12px 28px rgba(var(--dark-rgb), .18);
+  border: 1px solid color-mix(in srgb, var(--soft-contrast-yellow) 60%, var(--white) 40%);
+}
+html .Event-section .mein-event .events .btn-ruta{
+  background: var(--orange);
+  border-color: color-mix(in srgb, var(--orange) 65%, var(--dark) 35%);
+}
+html .Event-section .mein-event .events .btn-ruta:hover{
+  background: var(--blue-gray);
+}
+
+/* ---------- PROTOCOLO / HISTORIA ---------- */
+html #Protocol-section{
+  background: var(--soft-yellow);
+  border-top-color: var(--orange);
+  border-bottom-color: var(--orange);
+}
+html .story-section .s-box2{
+  background: var(--soft-contrast-yellow);
+  box-shadow: var(--brand-shadow);
+}
+html .story-section .s-box2 h1{
+  color: var(--dark);
+}
+html .story-section .s-box2 h3{
+  color: var(--cream-grey);
+}
+html .story-section .s-box2 p{
+  color: var(--brown-gray);
+}
+
+/* ---------- REGALOS ---------- */
+html #regalos{
+  border-bottom-color: var(--orange);
+  background: linear-gradient(180deg, var(--white) 0%, var(--soft-yellow) 100%);
+}
+html .box-regalos{
+  border-color: var(--orange);
+  background: var(--soft-yellow);
+  box-shadow: var(--brand-shadow);
+}
+html .descripcion-regalo h3{
+  color: var(--dark);
+}
+html .descripcion-regalo .row .col-svg i{
+  color: var(--orange);
+}
+
+/* ---------- GALERÍA ---------- */
+html .Gallary-section{
+  border-bottom-color: var(--orange);
+  background-image:
+    linear-gradient(var(--brand-overlay-30), var(--brand-overlay-30)),
+    url(../img/gallery.jpg);
+}
+
+/* ---------- FAMILIA & AMIGOS ---------- */
+html .friend_family-section .friend_family .familys{
+  background: var(--color-surface);
+  border-top: 3px solid var(--soft-contrast-yellow);
+  box-shadow: var(--brand-shadow);
+}
+html .friend_family-section .friend_family .familys h1{
+  color: var(--orange);
+}
+html .friend_family-section .friend_family .familys h3{
+  color: var(--dark);
+}
+html .friend_family-section .friend_family .familys p{
+  color: var(--brown-gray);
+}
+html .familys .social-icon .s-icon{
+  color: var(--orange);
+}
+html .familys .social-icon .s-icon:hover{
+  color: var(--dark);
+}
+
+/* ---------- FOOTER ---------- */
+html .footer-section{
+  background: var(--dark);
+  border-top: 2px solid var(--orange);
+}
+html .footer-section .copyrights p .c-o{
+  color: var(--orange);
+}
+
+/* ---------- ENLACES & FOCUS GLOBAL ---------- */
+html a{
+  color: var(--dark);
+}
+html a:hover{
+  color: var(--orange);
+}
+html :focus-visible{
+  outline: 3px solid color-mix(in srgb, var(--yellow) 70%, var(--orange) 30%);
+  outline-offset: 2px;
+}
