@@ -22,7 +22,7 @@ html{
 /* =========================
    THEME TOKENS (ROOT)
    ========================= */
-:root {
+:root[data-theme='original']{
   /* Brand palette (HEX) */
   --orange: #e47a2e;
   --yellow: #f7d794;
@@ -71,6 +71,162 @@ html{
   --Great-Vibes: "Great Vibes", cursive;
   --Garamond: 'Cormorant Garamond', serif;
 }
+
+:root[data-theme='marron_claro']{
+  /* Brand palette (HEX) - NUEVA PALETA BEIGE/NARANJA TERRROSO */
+  --orange: #D77F3A;
+  --yellow: #F7E9D7;
+  --rose-gold: #C17A67;
+  --red-violet: #B3543C;
+  --red-lips: #8B4513;
+  --light-grey: #F8F5F1;
+  --dark-grey: #8C7B67;
+  --cream-grey: #A89F94;
+  --light-cream-grey: #C4BCB2;
+  --white: #FFFFFF;
+  --black: #2E2A26;
+  --dark: #5D4E37;
+  --soft-yellow: #FDF6F0;
+  --soft-contrast-yellow: #F5E9DE;
+  --brown-gray: #9E7D5A;
+
+  /* Extra semantic colors */
+  --blue-gray: #5D4E37;
+  --error: #C0392B;
+  --alert: #D84246;
+  --seashell: #FFF5EE;
+
+  /* RGB */
+  --white-rgb: 255, 255, 255;
+  --black-rgb: 46, 42, 38;
+  --dark-rgb: 93, 78, 55;
+  --orange-rgb: 215, 127, 58;
+  --glow-rgb: 247, 233, 215;
+
+  /* Overlay */
+  --overlay-30: rgba(var(--black-rgb), 0.3);
+  --overlay-40: rgba(var(--black-rgb), 0.4);
+  --overlay-50: rgba(var(--black-rgb), 0.5);
+
+  /* Semantic tokens */
+  --color-bg: var(--white);
+  --color-surface: var(--light-grey);
+  --color-text: var(--dark);
+  --color-text-muted: var(--cream-grey);
+  --color-primary: var(--orange);
+  --color-accent: var(--rose-gold);
+
+  /* Fonts */
+  --Montserrat: "Montserrat", sans-serif;
+  --Great-Vibes: "Great Vibes", cursive;
+  --Garamond: 'Cormorant Garamond', serif;
+}
+
+/* === TEMA: Marrón Oscuro === */
+:root[data-theme="marron_oscuro"] {
+  --orange: #D35400;
+  --yellow: #E6C229;
+  --rose-gold: #B8860B;
+  --red-violet: #8B0000;
+  --red-lips: #2B1B17;
+  --light-grey: #FFFDF9;
+  --dark-grey: #6B5547;
+  --cream-grey: #7A695D;
+  --light-cream-grey: #9A897D;
+  --white: #ffffff;
+  --black: #000000;
+  --dark: #2B1B17;
+  --soft-yellow: #FEF9E7;
+  --soft-contrast-yellow: #FBEEE6;
+  --brown-gray: #8B6F55;
+
+  --blue-gray: #3A2F25;
+  --error: #C0392B;
+  --alert: #E6C229;
+  --seashell: #FDF9F0;
+
+  --white-rgb: 255,255,255;
+  --black-rgb: 0,0,0;
+  --dark-rgb: 43,27,23;
+  --orange-rgb: 211,84,0;
+  --glow-rgb: 230,200,80;
+
+  --overlay-30: rgba(var(--black-rgb), 0.3);
+  --overlay-40: rgba(var(--black-rgb), 0.4);
+  --overlay-50: rgba(var(--black-rgb), 0.5);
+
+  --color-bg: var(--white);
+  --color-surface: var(--light-grey);
+  --color-text: var(--dark);
+  --color-text-muted: var(--cream-grey);
+  --color-primary: var(--orange);
+  --color-accent: var(--rose-gold);
+
+  --Montserrat: "Montserrat", sans-serif;
+  --Great-Vibes: "Great Vibes", cursive;
+  --Garamond: 'Cormorant Garamond', serif;  
+}
+
+
+
+/* 2) Borgoña profundo — sofisticado y sobrio */
+:root[data-theme='dorado_naranja_borgona']{
+  /* Brand palette (HEX) - Dorado/Naranja/Borgoña */
+  --orange: #D35400;          /* Naranja terroso elegante */
+  --dark: #5E1320;            /* Borgoña intenso para acentos */
+  --soft-yellow: #FEF9E7;     /* Amarillo muy suave casi blanco */
+  --soft-contrast-yellow: #FBEEE6; /* Beige cálido claro */
+  --light-grey: #FDFEFE;      /* Gris neutro muy claro */
+
+  /* Colores complementarios */
+  --yellow: #F7DC6F;          /* Dorado suave */
+  --rose-gold: #B2776E;       /* Rose-gold suave */
+  --red-violet: #7F1D1D;      /* Rojo 900 */
+  --red-lips: #4C0D0D;        /* Claret profundo */
+  --dark-grey: #566573;       /* Gris azulado */
+  --cream-grey: #7F8C8D;      /* Gris cálido */
+  --light-cream-grey: #B2BABB;/* Gris claro cálido */
+  --white: #FFFFFF;
+  --black: #17202A;           /* Negro azulado oscuro */
+  --brown-gray: #8D6E63;      /* Marrón terroso */
+
+  /* Semantic colors */
+  --blue-gray: #26364D;       /* Azul grisáceo más frío */
+  --error: #9B1C1C;           /* Error */
+  --alert: #C53030;           /* Alerta */
+  --seashell: #FFF5EE;        /* Highlight sutil */
+
+  /* RGB channels for alpha usage */
+  --white-rgb: 255, 255, 255;
+  --black-rgb: 23, 32, 42;
+  --dark-rgb: 94, 19, 32;     /* Borgoña */
+  --orange-rgb: 211, 84, 0;
+  --yellow-rgb: 247, 220, 111;
+  --glow-rgb: 253, 203, 110;  /* Dorado suave para efectos */
+
+  /* Overlay utilities */
+  --overlay-30: rgba(var(--black-rgb), 0.3);
+  --overlay-40: rgba(var(--black-rgb), 0.4);
+  --overlay-50: rgba(var(--black-rgb), 0.5);
+
+  /* Semantic tokens */
+  --color-bg: var(--white);
+  --color-surface: var(--light-grey);
+  --color-text: var(--black);
+  --color-text-muted: var(--cream-grey);
+  --color-primary: var(--orange);
+  --color-accent: var(--dark);
+
+  /* Fonts */
+  --Montserrat: "Montserrat", sans-serif;
+  --Great-Vibes: "Great Vibes", cursive;
+  --Garamond: 'Cormorant Garamond', serif;
+}
+
+
+
+
+/*--------------------- Navigation starts here  -----------------*/
 
 header {
   overflow: hidden;
