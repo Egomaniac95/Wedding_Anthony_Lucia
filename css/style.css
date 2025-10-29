@@ -2146,3 +2146,33 @@ html :focus-visible{
   outline: 3px solid color-mix(in srgb, var(--yellow) 70%, var(--orange) 30%);
   outline-offset: 2px;
 }
+
+/* ====== GROOMSMEN en laptops/desktop (sin afectar móvil) ====== */
+@media only screen and (min-width: 992px) {
+  /* Si puedes agregar class="groomsmen" a esas dos <img>, usa esto: */
+  img.groomsmen {
+    width: 100%;
+    height: auto !important;   /* anula los 300px fijos */
+    aspect-ratio: 4 / 3;       /* bloquea 4:3 */
+    object-fit: cover;         /* recorte elegante sin deformar */
+    object-position: center;
+  }
+
+  /* Si NO puedes tocar el HTML, usa selector por nombre de archivo: */
+  img[src*="groomsmen-1"],
+  img[src*="groomsmen-2"] {
+    width: 100%;
+    height: auto !important;   /* anula height:300px !important; */
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  /* Extra: por si están dentro del grid de 'friend_family' con la regla de 300px */
+  .friend_family-section .friend_family .familys img[src*="groomsmen-1"],
+  .friend_family-section .friend_family .familys img[src*="groomsmen-2"] {
+    height: auto !important;   /* refuerzo específico del grid */
+    aspect-ratio: 4 / 3;
+  }
+}
