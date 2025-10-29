@@ -2176,3 +2176,26 @@ html :focus-visible{
     aspect-ratio: 4 / 3;
   }
 }
+
+/* ====== GALERÍA: evita que el carrusel recorte el subtítulo (desktop) ====== */
+@media (min-width: 992px) {
+  .Gallary-section{
+    height: auto;            /* deja que la sección crezca */
+    min-height: 90vh;        /* mantiene presencia de héroe */
+    overflow: visible;       /* no recortes contenido */
+    padding-bottom: 40px;    /* espacio respirable debajo */
+  }
+
+  .Gallary-section .headings{
+    position: relative;
+    z-index: 2;              /* título siempre arriba */
+    padding-top: clamp(80px, 14vh, 220px);
+    padding-bottom: clamp(16px, 3vh, 40px);
+  }
+
+  .Gallary-section .gallary{
+    position: static;        /* saca el absolute */
+    margin-top: 24px;        /* separa del subtítulo */
+    z-index: 1;
+  }
+}
