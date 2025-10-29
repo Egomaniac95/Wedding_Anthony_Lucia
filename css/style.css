@@ -2214,10 +2214,6 @@ html :focus-visible{
     max-width: 990px !important; 
   }
   
-  .inner {
-    /* Este es tu contenedor para el Menú de Navegación */
-    max-width: 990px; 
-  }
 
   .regalos-container {
     /* Este es el contenedor de la sección de Regalos */
