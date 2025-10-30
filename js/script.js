@@ -192,7 +192,7 @@ setInterval(() => {
     document.getElementById("minutes").innerHTML = 0;
     document.getElementById("seconds").innerHTML = 0;
     document.getElementById("countdown").classList.add("countdown-finished");
-    document.getElementById("countdown").innerHTML = "¡ Que viva la familia Ramirez Aranda !";
+    document.getElementById("countdown").innerHTML = "¡ Que vivan los novios !";
     return;
   };
 
@@ -211,7 +211,7 @@ setInterval(() => {
     // If the count down is over, write some text 
   if (timeRemaining < 0) {
     document.getElementById("countdown").classList.add("countdown-finished");
-    document.getElementById("countdown").innerHTML = "¡ Que viva la familia Ramirez Aranda !";
+    document.getElementById("countdown").innerHTML = "¡ Que vivan los novios !";
   }
 }, 1000);;
 
@@ -307,10 +307,10 @@ btnConsultar.addEventListener('click', (event) => {
 
     if (numInvitados === 1) {
         // Mensaje en singular, usando backticks (`) para que ${data.MESA} funcione
-        entradas = `Nos encantaría contar con tu presencia en nuestra boda, por lo cual hemos reservado un asiento especialmente para ti en la mesa <span>${data.MESA}</span>.`;
+        entradas = `Nos encantaría contar con tu presencia en nuestra boda, por lo cual hemos reservado un lugar especialmente para ti`;
     } else {
         // Mensaje en plural
-        entradas = `Nos encantaría contar con su presencia en nuestra boda, por lo cual hemos reservado <span>${data.NUMBER_GUEST}</span> asientos especialmente para ustedes en la mesa <span>${data.MESA}</span>.`;
+        entradas = `Sería un privilegio contar con su grata compañía en la celebración de nuestra boda. Hemos dispuesto <span>${data.NUMBER_GUEST}</span> lugares especialmente para ustedes.`;
     }
 
     pruebaDiv.innerHTML = `
