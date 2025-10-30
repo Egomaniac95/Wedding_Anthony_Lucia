@@ -307,7 +307,7 @@ btnConsultar.addEventListener('click', (event) => {
 
     if (numInvitados === 1) {
         // Mensaje en singular, usando backticks (`) para que ${data.MESA} funcione
-        entradas = `Nos encantaría contar con tu presencia en nuestra boda, por lo cual hemos reservado un lugar especialmente para ti`;
+        entradas = `Nos encantaría contar con tu presencia en nuestra boda, por lo cual hemos reservado <span>un lugar</span> especialmente para ti`;
     } else {
         // Mensaje en plural
         entradas = `Sería un privilegio contar con su grata compañía en la celebración de nuestra boda. Hemos dispuesto <span>${data.NUMBER_GUEST}</span> lugares especialmente para ustedes.`;
